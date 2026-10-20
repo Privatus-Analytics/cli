@@ -1,0 +1,11 @@
+/privatus
+/privatus.exe
+/cli
+dist/
+node_modules/
+.secrets/
+.DS_Store
+SUBMISSION.md
+.env
+.env.local
+coverage/
