@@ -1,8 +1,22 @@
 # privatus CLI
 
-A single-binary command-line client for [Privatus Analytics](https://privatusanalytics.com),
-the privacy-first, cookieless web analytics. Pure Go standard library, no
-dependencies.
+**Your website stats in the terminal. One small program with no extra libraries.**
+
+You want to check your site numbers or set up a goal, but that means opening a
+browser and clicking around. And you can't put a browser in a script.
+
+`privatus` is a command-line tool for Privatus Analytics. Log in once with an
+API token. Then one command shows this week's visitors, lists your sites,
+creates goals or calls any part of the Privatus Analytics API. It can also write
+the setup that connects AI assistants to your data through MCP (the common way
+AI assistants talk to other tools).
+
+So you get your numbers in seconds, and you can use them in scripts and
+scheduled jobs. The numbers are honest too. Privatus Analytics counts visits
+without cookies, so there is no cookie pop-up for your analytics, and it leaves
+bots out.
+
+**Free plan, no card:** 10,000 events a month (an event is a page view or an action you track) on up to 3 sites. [Start free at privatusanalytics.com](https://privatusanalytics.com).
 
 ## Install
 
@@ -14,7 +28,7 @@ docker run --rm -v "$PWD":/src -w /src golang:1.26 go build -o privatus .
 ```
 
 Build with a supported Go release (`go.mod` asks for 1.26.8 or newer). The
-binary carries Go's standard library, and end-of-life Go lines no longer
+binary includes Go's standard library, and end-of-life Go lines no longer
 get security fixes for TLS and HTTP.
 
 ## Commands
